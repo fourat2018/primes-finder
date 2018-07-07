@@ -20,7 +20,8 @@ class SuperActor extends Actor {
     case range:Range => val workers =  Iterator.continually(workPool).flatten
                   range.foreach{ number:Int => workers.next ! number}
 
-    case (number:Int, predicate : Boolean ) => if(predicate) println(number + " is Prime") else println(number + " is not prime")
+
+case (number:Int, predicate : Boolean ) => if(predicate) println(number + " is Prime") else println(number + " is not prime")
 
   }
 
